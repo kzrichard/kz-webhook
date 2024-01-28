@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def index():
 def confluence():
     data = request.get_json()
     print('data', data)
-    return data, 200
+    return jsonify(data)
 
 
 # update_page_data = {
